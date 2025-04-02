@@ -4,9 +4,9 @@ public class ConcatenationOfArray {
 
         int[] res = new int[l * 2];
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < l; i++) {
             res[i] = nums[i];
-            res[l + i] = nums[i];
+            res[i + l] = nums[i];
         }
 
         return res;

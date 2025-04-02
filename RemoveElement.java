@@ -1,25 +1,17 @@
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
-        int l = 0;
-        int r = 1;
+//        [1, 1, 2, 1, 3]
+//        [2, 3]
 
-        while (r < nums.length){
-            if(nums[l] == val && nums[r] != val){
-                nums = swap(nums, l, r);
-                l++;
+        int currPos = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val){
+                nums[currPos] = nums[i];
+                currPos++;
             }
-
-            r++;
         }
 
-        return l;
-    }
-
-    int[] swap(int[] nums, int l, int r){
-        int temp = nums[l];
-        nums[l] = nums[r];
-        nums[r] = temp;
-
-        return nums;
+        return currPos + 1;
     }
 }
