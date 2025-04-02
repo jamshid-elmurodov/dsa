@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class ShuffleTheArray {
     public static int[] shuffle(int[] nums, int n) {
 //        [1, 2, 3, 4, 5, 6] n = 3
@@ -15,9 +13,5 @@ public class ShuffleTheArray {
         }
 
         return res;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(shuffle(new int[]{1, 2, 3, 4, 5, 6}, 3)));
     }
 }
